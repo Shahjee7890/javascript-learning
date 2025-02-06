@@ -1,6 +1,6 @@
 //Date = 4/2/2025
 // --------------------------------------------------------------------------------------------------------
-// var _myName = 'shah';
+// var _myName = "shah";
 // var _1my__Name = 'shah';
 // var $myName = 'shah';
 
@@ -405,7 +405,7 @@
 //   console.log(element);
 // }
 // --------------------------------------------------------------------------------------------------------
-// @@For each loop
+// @@For Each loop
 // @@ use normal function
 // let myName = ["ali", "qasim", "hussian", "raza", "khurram"];
 // myName.forEach(function (element, index, array) {
@@ -417,6 +417,307 @@
 // myName.forEach((element, index, array) => {
 //   console.log(element + index + array);
 // });
+
+// --------------------------------------------------------------------------------------------------------
+// # Date= 6/2/2025
+// --------------------------------------------------------------------------------------------------------
+// @@ Searching and filter in an Array
+// Array.prototype.indexOf()
+
+// var myFriendName = ['shah', 'zaidi', 'haider', 'king', 'queen'];
+// console.log(myFriendName.indexOf('haider', 3));
+
+// --------------------------------------------------------------------------------------------------------
+// @@ Array.prototype.lastIndexOf()
+
+// var myFriendName = ["shah", "zaidi", "haider", "king", "queen"];
+// console.log(myFriendName.lastIndexOf("zaidi", 3));
+
+// --------------------------------------------------------------------------------------------------------
+// @@ Array.prototype.include()
+
+// var myFriendName = ["shah", "zaidi", "haider", "king", "queen"];
+// console.log(myFriendName.includes("zaidi"));
+
+// --------------------------------------------------------------------------------------------------------
+// @@ Array.prototype.find()
+// Return the found elemnt in the array if some element in the
+// array satisfies te testing function or undefine if not found
+// Only problem is that it return only one element.
+
+// const prices = [100, 300, 350, 400, 450];
+// const findElem = prices.find((currVal) => {
+//     return currVal < 400;
+// })
+// console.log(prices.find((currVal) => currVal > 1400));
+// --------------------------------------------------------------------------------------------------------
+// @@ Array.prototype.findIndex()
+// const prices = [100, 300, 350, 400, 450]
+// console.log(prices.findIndex((currVal) => currVal < 400));
+// --------------------------------------------------------------------------------------------------------
+// @@  Array.prototype.filter()
+// Returns a new array containing all elements of the calling
+// array for which the provided filtering function returns true.
+
+// const prices = [100, 300, 350, 400, 450];
+// const newPriceTag = prices.filter((elem, index) => {
+//     return elem > 1400
+// })
+// console.log(newPriceTag);
+
+// --------------------------------------------------------------------------------------------------------
+// @@ How to short Array
+// Array.prototype.sort()
+// order in ascending order and its work on only strings
+// const months = ['jan', 'feb', 'mar', 'apr', 'may']
+// console.log(months.sort());
+// const num = [80, 60, 40, 10, 5];
+// console.log(num.sort());
+// // --------------------------------------------------------------------------------------------------------
+// @@ Perform CRUD (Create Read Update and Delete)
+
+// Array.prototypw.push() its return the new length of array
+// const animal = ['cow', 'sheep', 'cat', 'bull'];
+// const count = animal.push('goat');
+// console.log(count);
+// animal.push('goat', 'deep', 'heep', 'keep')
+// console.log(animal);
+
+// --------------------------------------------------------------------------------------------------------
+// @@ Array.protoype.unshift()
+// const animal = ['cow', 'sheep', 'cat', 'bull'];
+// const count = animal.unshift('goat');
+// console.log(count);
+// console.log(animal)
+// animal.push('goat', 'deep', 'heep', 'keep')
+
+// ## Example 2
+// const number = [1, 3, 2, 4, 5, 5];
+// number.unshift(8);
+// console.log(number);
+// --------------------------------------------------------------------------------------------------------
+// @@ Array.protoype.pop()
+// pop mmethod remove the last elemnt of array and change the length of array and return that element
+
+// const flow = ['aa', 'cc', 'bb', 'gg'];
+// console.log(flow);
+// console.log(flow.pop());
+// console.log(flow);
+// --------------------------------------------------------------------------------------------------------
+// @@ Array.protoype.shift()
+//  shift method remove the fist element of array and return remove element
+// const flow = ['aa', 'cc', 'bb', 'gg'];
+// console.log(flow);
+// console.log(flow.shift());
+// console.log(flow);
+// --------------------------------------------------------------------------------------------------------
+// @@ Practice time
+// --------------------------------------------------------------------------------------------------------
+// @@ Array.prototype.splice()
+// const flow = ['aa', 'cc', 'bb', 'gg'];
+// const newFlow = flow.splice(4,0,'zz')
+// Sol 1 //
+// const newFlow = flow.splice(flow.length,0,'zz')
+// console.log(flow);
+// Sol 2 //
+// console.log(newFlow);
+// Sol 3 //
+// const flow = ['aa', 'cc', 'bb', 'gg'];
+// const bigFlow = flow.splice(1,1,'FF');
+// console.log(flow);
+
+// const indexOfFlow = flow.indexOf('bb');
+
+// if (indexOfFlow != -1) {
+//     const updateFlow = flow.splice(indexOfFlow,1,'BB')
+//     console.log(flow);
+// } else {
+//     console.log('data are not');
+
+// }
+
+// const indexOfFlow = flow.indexOf('bb');
+
+// if (indexOfFlow != -1) {
+//     const updateFlow = flow.splice(indexOfFlow,1)
+//     console.log(flow);
+// } else {
+//     console.log('data are not');
+// }
+// --------------------------------------------------------------------------------------------------------
+// @@ Map and Reduce Method
+
+// @@ Array.prototype.map()
+// Return a new array conatining the result of calling a function on every element in this array
+
+// const array1 = [1,2,4,5,9,70,78,88];
+// let newArr = array1.map((curElem,index,arr) => {
+//     return curElem > 9
+// })
+// console.log(array1);
+// console.log(newArr);
+// let newArr = array1.map((curElem,index,arr) => {
+//     return `index no = ${index} and the value is ${curElem} belong to ${arr}`
+// })
+// console.log(newArr);
+// --------------------------------------------------------------------------------------------------------
+// @@Practice time
+// Sol 1
+// let arr = [25, 36, 49, 64, 69 ]
+// let arrsqr = arr.map((currelm) =>  Math.sqrt(currelm));
+// console.log(arrsqr);
+
+// Sol 2
+// let arr = [2, 3, 4, 6, 8];
+
+// let arr2 = arr
+//   .map((element) => element * 2)
+//   .filter((element) => element > 10)
+//   .reduce((accumulator, curelme, index, arr) => (accumulator += curelme));
+// console.log(arr2);
+// --------------------------------------------------------------------------------------------------------
+// @@ Reduce Method
+// Flatten an array means to convert the 3d or 2d array into a single dimensional array
+
+// let arr = [5, 6, 7];
+// let sum = arr.reduce((accumulator, curelme, index, arr) => {
+//   return (accumulator += curelme);
+// },2);
+// console.log(sum);
+
+// --------------------------------------------------------------------------------------------------------
+// @@ converting 2b array into dimentsional array
+
+// const arr = [
+//   ["shah1", "zaidi1"],
+//   ["shah2", "zaidi2"],
+//   ["shah3", "zaidi7"],
+//   ["shah4", "zaidi4"],
+// ];
+
+// let flatArry = arr.reduce((accum, currval) => {
+//   return accum.concat(currval);
+// });
+
+// console.log(flatArry);
+
+// --------------------------------------------------------------------------------------------------------
+// @@ String in JavaScript 
+
+// A Javascript string is zero to more charters written inside quote
+
+// JS string are use for storing na d manipulating text.
+// In string we use single are double quotes 
+
+// Strings can be created as primitives,
+//  from stings literals, or as object, using the string() constructor 
+
+// Example 
+
+// let myName = "zaidi shah";
+// let myChannelName = 'zaidi shah';
+// let nickName = new String("haider zaidi");
+// console.log(myName);
+// console.log(nickName);
+// --------------------------------------------------------------------------------------------------------
+// @@ how to find length of string 
+// let myName = "zaidi shah";
+// console.log(myName.length);
+// --------------------------------------------------------------------------------------------------------
+// @@ Escape character
+
+// let anysen = "we are soo \"shah\" from the earth.";
+// let anysen = 'we are soo "shah" from the earth.';
+// console.log(anysen);
+// --------------------------------------------------------------------------------------------------------
+// @@ find a sting in a string 
+
+// @@string.prototype.indexOf(searchValue [, fromIndex])
+
+// The indexOf() method returns the index of (The position of) the first occurrence of a specified text in srting
+
+// const myData = 'I am a developer ';
+// console.log(myData.indexOf('developer'));
+
+// --------------------------------------------------------------------------------------------------------
+// @@string.prototype.lastIndexOf
+// const myData = 'I am a developer ';
+// console.log(myData.lastIndexOf('a', 4));
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
 
 // --------------------------------------------------------------------------------------------------------
 
