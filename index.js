@@ -602,17 +602,17 @@
 // console.log(flatArry);
 
 // --------------------------------------------------------------------------------------------------------
-// @@ String in JavaScript 
+// @@ String in JavaScript
 
 // A Javascript string is zero to more charters written inside quote
 
 // JS string are use for storing na d manipulating text.
-// In string we use single are double quotes 
+// In string we use single are double quotes
 
 // Strings can be created as primitives,
-//  from stings literals, or as object, using the string() constructor 
+//  from stings literals, or as object, using the string() constructor
 
-// Example 
+// Example
 
 // let myName = "zaidi shah";
 // let myChannelName = 'zaidi shah';
@@ -620,7 +620,7 @@
 // console.log(myName);
 // console.log(nickName);
 // --------------------------------------------------------------------------------------------------------
-// @@ how to find length of string 
+// @@ how to find length of string
 // let myName = "zaidi shah";
 // console.log(myName.length);
 // --------------------------------------------------------------------------------------------------------
@@ -630,7 +630,7 @@
 // let anysen = 'we are soo "shah" from the earth.';
 // console.log(anysen);
 // --------------------------------------------------------------------------------------------------------
-// @@ find a sting in a string 
+// @@ find a sting in a string
 
 // @@string.prototype.indexOf(searchValue [, fromIndex])
 
@@ -644,41 +644,143 @@
 // const myData = 'I am a developer ';
 // console.log(myData.lastIndexOf('a', 4));
 // --------------------------------------------------------------------------------------------------------
+// @@ Date 7/2/2025
+// --------------------------------------------------------------------------------------------------------
+// @@ Search for a string  in a string
+
+//  String.prototype. search(regexp)
+// The search() method searches a string for a specified
+// value nad return the position of the match
+
+// const myBio = "i am mujtaba haider";
+// let sData = myBio.search("mujtaba")
+// console.log(myBio);
 
 // --------------------------------------------------------------------------------------------------------
+// @@ Extracting string part
+// There are three method for Extracting a part of a string.
+
+// slice(start,end)
+// substring(start,end)
+// substr(start,end)
+
+// @@The slice() method
+// slice() extracts a part of a string nad return the extracted part in a new string.
+
+//  The method takes 2 parameter: the start position and the end position (end not include).
+
+// var str = "Apple, Banna, Kiwi";
+// let res = str.slice(0,4);
+// let res = str.slice(7,-2);
+// console.log(res);
+//  The slice method selects the element  starting at the given start argument, and ends at, but does not
+// include the given argument
+// NOTE: The original array will not be changed .
+// Reminder JavaScript counts position from zero. first poisition is 0
+// --------------------------------------------------------------------------------------------------------
+// ## practice time
+// let myTweet =
+//   "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa incidunt ex quam excepturiLorem ipsum dolor sit amet consectetur adipisicing elit. Rerum provident aut porro iusto rem a quisquam, quae possimus vero eaque aperiam doloribus delectus nemo modi quaerat blanditiis dolorum nulla? Suscipit.asperiores et perspiciatis qui tenetur quae corporis temporibus quod, doloribus harum similique laborum impedit sunt nam! Necessitatibus.";
+// let myac = myTweet.slice(0, 280);
+// console.log(myTweet.length);
+// console.log(myac);
 
 // --------------------------------------------------------------------------------------------------------
+// @@ substring method
+// substring can't accept nagative indexes
+// var str = "Apple, Banna, Kiwi";
+// let bax = str.substring(7,-2);
+// console.log(bax);
+// --------------------------------------------------------------------------------------------------------
+// @@ Replace string content ()
+// string.prototype.replace(searchFor, replacewith)
+
+// The replace() method replaces a specified value with other value in string
+// let bio = `my name is zaidi i am shah zaidi`;
+// let replace = bio.replaceAll('zaidi ', 'haider ');
+// console.log(replace);
 
 // --------------------------------------------------------------------------------------------------------
+// @@ Extracting string character
+// there are 3 types of method  to extracting string character
+// chartAt(position)
+// charCodeAt(position)
+// Property access []
+// --------------------------------------------------------------------------------------------------------
+// @@chartAt(position)
+// the charAt method returns the character at a specified index (position) in a string
+// let stc = "HELLOW WORLD";
+// console.log(stc.charAt(1));
+// --------------------------------------------------------------------------------------------------------
+// @@ toUppercase and toLowerCase
+// let myNmae = "haider zaidi"
+// console.log(myNmae.toUpperCase());
+// console.log(myNmae.toLowerCase());
 
 // --------------------------------------------------------------------------------------------------------
+// @@ concat method
+// let firstNmae = "zaidi ";
+// let lastName = "shah";
+// console.log(firstNmae.concat(lastName));
 
 // --------------------------------------------------------------------------------------------------------
+// @@ string.trim()
+// trim() method remove white shpace from both sides of a string
+// let nam = "                hahah      "
+// console.log(nam.trim());
 
 // --------------------------------------------------------------------------------------------------------
+// @@ converting string into array
+// converting string into array using split() method
+// let text = "a, b, c, d, e";
+// // console.log(text.split(","));
+// // console.log(text.split(" "));
+// console.log(text.split("|"));
 
 // --------------------------------------------------------------------------------------------------------
+// @@  Date and time in JavaScript
+// jAvaScript Date object represent a gingle moment in time in a platform-independent format Date object
+// contain a number that represent millisecoound since 1 january 1970 UTC 
+// --------------------------------------------------------------------------------------------------------
+// @@ Createing Date object 
+// there are 4 way to create a new Date object 
+//  new Date ()
+// //  it take 7 arguments
+//  new Date (year, months, day, hours, minutes, secound, miillisecound)
+//  new Date (miillisecound)
+// //  we can't avoid month section
+//  new Date (date string)
 
 // --------------------------------------------------------------------------------------------------------
+// // @@ new Date ()
+// let curDate = new Date();
+// console.log(curDate);
+// console.log(new Date ());
+// console.log(new Date ().toDateString());
+// console.log(new Date ().toString());
 
 // --------------------------------------------------------------------------------------------------------
+// @@Date .now
+// find for secound after 1970
+// console.log(Date.now());
 
 // --------------------------------------------------------------------------------------------------------
+// @@ Date Method
+// const curDate = new Date();
+// console.log(curDate.toDateString());
+// console.log(curDate.getFullYear());
+// console.log(curDate.getMonth());
+// console.log(curDate.getDate());
+// console.log(curDate.getDay());
 
 // --------------------------------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------------------------------
-
+// @@ Time method
+// const curDate = new Date();
+// // console.log(curDate.getTime());
+// console.log(curDate.getHours());
+// console.log(curDate.getMinutes());
+// console.log(curDate.getSeconds());
+// console.log(curDate.getMilliseconds());
 // --------------------------------------------------------------------------------------------------------
 
 // --------------------------------------------------------------------------------------------------------
