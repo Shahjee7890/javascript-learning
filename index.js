@@ -1,4 +1,4 @@
-//Date = 4/2/2025
+// Date = 4/2/2025
 // --------------------------------------------------------------------------------------------------------
 // var _myName = "shah";
 // var _1my__Name = 'shah';
@@ -80,11 +80,11 @@
 // console.log(a > b && b > 0);
 
 // --------------------------------------------------------------------------------------------------------
-//@@ Logical or Operator (||)
+// @@ Logical or Operator (||)
 // console.log(a > b || b > 0);
 
 // --------------------------------------------------------------------------------------------------------
-//@@ Logical not operator (!)
+// @@ Logical not operator (!)
 
 // console.log( !((a > b || b > 0)));
 // console.log(!false);
@@ -100,7 +100,7 @@
 
 // --------------------------------------------------------------------------------------------------------
 
-//@@ Exponentiation operator (**)
+// @@ Exponentiation operator (**)
 
 // console.log(2**2);
 
@@ -240,7 +240,7 @@
 // }
 
 // --------------------------------------------------------------------------------------------------------
-//@@ While loop statment
+// @@ While loop statment
 
 // var num = 20;
 // while(num <= 10) {
@@ -266,7 +266,7 @@
 // A jS function is block of code designed to perform a particular task.
 // --------------------------------------------------------------------------------------------------------
 
-//@@ Function
+// @@ Function
 
 // function sum() {
 //   var a = 10,
@@ -301,7 +301,7 @@
 //   }
 //   sum(10,2)
 // --------------------------------------------------------------------------------------------------------
-//@@ Function Expression
+// @@ Function Expression
 // Create a function and put into the variable .
 
 // function sum(a,b) {
@@ -318,7 +318,7 @@
 // var funex = sum(10, 2);
 // console.log(funex);
 // --------------------------------------------------------------------------------------------------------
-//@@Anonymous Function and Expression
+// @@Anonymous Function and Expression
 
 // var funEx = function(a, b) {
 //       return (total = a + b);
@@ -425,7 +425,7 @@
 // Array.prototype.indexOf()
 
 // var myFriendName = ['shah', 'zaidi', 'haider', 'king', 'queen'];
-// console.log(myFriendName.indexOf('haider', 3));
+// console.log(myFriendName.indexOf('haider'));
 
 // --------------------------------------------------------------------------------------------------------
 // @@ Array.prototype.lastIndexOf()
@@ -653,8 +653,9 @@
 // value nad return the position of the match
 
 // const myBio = "i am mujtaba haider";
-// let sData = myBio.search("mujtaba")
+// let sData = myBio.search("am")
 // console.log(myBio);
+// console.log(sData);
 
 // --------------------------------------------------------------------------------------------------------
 // @@ Extracting string part
@@ -733,17 +734,17 @@
 // @@ converting string into array
 // converting string into array using split() method
 // let text = "a, b, c, d, e";
-// // console.log(text.split(","));
-// // console.log(text.split(" "));
+// console.log(text.split(","));
+// console.log(text.split(" "));
 // console.log(text.split("|"));
 
 // --------------------------------------------------------------------------------------------------------
 // @@  Date and time in JavaScript
 // jAvaScript Date object represent a gingle moment in time in a platform-independent format Date object
-// contain a number that represent millisecoound since 1 january 1970 UTC 
+// contain a number that represent millisecoound since 1 january 1970 UTC
 // --------------------------------------------------------------------------------------------------------
-// @@ Createing Date object 
-// there are 4 way to create a new Date object 
+// @@ Createing Date object
+// there are 4 way to create a new Date object
 //  new Date ()
 // //  it take 7 arguments
 //  new Date (year, months, day, hours, minutes, secound, miillisecound)
@@ -782,45 +783,149 @@
 // console.log(curDate.getSeconds());
 // console.log(curDate.getMilliseconds());
 // --------------------------------------------------------------------------------------------------------
+// Date = 10/2/2025
+// --------------------------------------------------------------------------------------------------------
+// @@ Math object in javaScript
+// The js math object allows you to perform mathematical task on number.
+// console.log(Math.PI);
 
 // --------------------------------------------------------------------------------------------------------
+// @@ Round Method Math.round()
+// return the value of x rounded to its nearst integer
+// let num = 10.2565;
+// console.log(Math.round(num));
 
 // --------------------------------------------------------------------------------------------------------
+// @@Pow method Math.pow()
+// return the value of x to the power of y
+// console.log(Math.pow(2,3));
 
 // --------------------------------------------------------------------------------------------------------
+// Sqrt Method Math.sqrt()
+// its return square root of x
+// console.log(Math.sqrt(25));
+// console.log(Math.sqrt(20));
+// console.log(Math.sqrt(30));
 
 // --------------------------------------------------------------------------------------------------------
+// @@ abs method Math.abs()
+// its return the absolute (positive) value of x
+
+// console.log(Math.abs(-55));
+// console.log(Math.abs(-55.5));
+// console.log(Math.abs(-966));
 
 // --------------------------------------------------------------------------------------------------------
+// @@ ceil methos Marhod.ceil()
+// its return the value of x rounded up to its nearest integer.
+
+// console.log(Math.ceil(4.51));
+// console.log(Math.ceil(99.1));
 
 // --------------------------------------------------------------------------------------------------------
+// @@ Floor method Math.floor()
+// its return the value of x round down to its nearst interger
+
+// console.log(Math.floor(4.6));
+// console.log(Math.floor(8.1));
 
 // --------------------------------------------------------------------------------------------------------
+// @@ min methos Math.min()
+// its return the lowest number ina list of argument
+// console.log(Math.min(2, 3, 4, 6, 7, -9));
 
 // --------------------------------------------------------------------------------------------------------
+// @@ max methos Math.max()
+// its return the highest number ina list of argument
+// console.log(Math.max(2, 3, 4, 6, 7, -9));
 
 // --------------------------------------------------------------------------------------------------------
+// @@ random method Math.random()
+// its return random number between 0 to 1 when we put condition 1 to 10 then its return random number 1 to 10
+// console.log(Math.floor(Math.random()*10));
 
 // --------------------------------------------------------------------------------------------------------
+// @@ trunc method Math.turnc()
+// its return the integer part of number
+// console.log(Math.trunc(4.6));
+// console.log(Math.trunc(-99.1));
 
 // --------------------------------------------------------------------------------------------------------
+// @@ DOM in JavaScript
+
+//  @@cWindow vs DOM
+// ## Window
+// Window is the main container or we can say the (Global ojbect ) and any operation related to entier
+// browser window can be a part of a window object
+// ## DOM
+// Dom is the child of window object
+// --------------------------------------------------------------------------------------------------------
+// @@ DOM vs BOM
+
+// ## DOM
+// The DOM is document object model, which deals with the document, the HTML element themselve e.g
+// document and all traversal you would do in it, events etc.
+
+// FOR example :-
+// chage the backgroud color red
+// document.body.style.background = "red";
+// --------------------------------------------------------------------------------------------------------
+// ## BOM
+// The BOM is the broeswr object model, which deals with browser components aside from the document, like
+// history, location , navigator and screen (as well as some other that very by browser). OR
+// In simple meaning all the window operation which comes under BOM are performed using BOM
+// --------------------------------------------------------------------------------------------------------
+// @@ Navigate through the DOM 
+// 1: document.documentElement
+// return the element that is the root element of the document 
+// 2: document.head
+// 3: document.body
+// 4: document.boday.childNode (include tab,enter and whiteSpace)
+// list of the direct children only 
+// 5: document.children (without text nodes, only regular Element )
+// 6: documnet. childNode,Length
+// 7: document.body.firstElemetChild
+// use to find child
+// 8: document.body.nextSibiling
+// 9: document.body.nextElemntSibiling
+// 10: document.body.previousElemntSibiling
+// 11:document.getElementById()
+// 12:document.getElementsByClassName()
+// 11:document.getElementsByName()
+// 13: document.querySelector()
+// select first matching value 
+// 14: document.querySelectorAll()
+// will return all the element
 
 // --------------------------------------------------------------------------------------------------------
+// @@ EVENTS in JavaScript
+
+// HTML enents are "things" tat happen to HTMl elements.
+// When jS is used in HTML pages, JS can "react" on these events
+// --------------------------------------------------------------------------------------------------------
+// @@ HTML Events
+// An HTML event can be something in browser does, or something  are user does.
+// Here a some example of HTML events
+// 1: An HTML web page has finished loading
+// 2: An input field was changed 
+// 3: An HTML web page has finished loading
+// often, when event happen, you may want to do something.
+// 4: HTML allows events handler attributes, with  JS code,
+// to be added to HTML elements. 
 
 // --------------------------------------------------------------------------------------------------------
+// @@ 4 way of writing Events in JavaScript
 
+// 1: using inline events alert();
+// 2: By calling a function (We already seen and most common way of writing )
+// 3: Using Inline events (HTMl onclick = "" property and element.onclick)
+// 4: using event listeners (addEventlistener and IE's attachEvent)
+
+// check the event HTML file
 // --------------------------------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------------------------------
-
+// @@ What is Event object 
+//  Event object is the parent object of the event object.
+// For example: click event, onClick event etc.
 // --------------------------------------------------------------------------------------------------------
 
 // --------------------------------------------------------------------------------------------------------
