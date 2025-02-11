@@ -875,13 +875,13 @@
 // history, location , navigator and screen (as well as some other that very by browser). OR
 // In simple meaning all the window operation which comes under BOM are performed using BOM
 // --------------------------------------------------------------------------------------------------------
-// @@ Navigate through the DOM 
+// @@ Navigate through the DOM
 // 1: document.documentElement
-// return the element that is the root element of the document 
+// return the element that is the root element of the document
 // 2: document.head
 // 3: document.body
 // 4: document.boday.childNode (include tab,enter and whiteSpace)
-// list of the direct children only 
+// list of the direct children only
 // 5: document.children (without text nodes, only regular Element )
 // 6: documnet. childNode,Length
 // 7: document.body.firstElemetChild
@@ -893,7 +893,7 @@
 // 12:document.getElementsByClassName()
 // 11:document.getElementsByName()
 // 13: document.querySelector()
-// select first matching value 
+// select first matching value
 // 14: document.querySelectorAll()
 // will return all the element
 
@@ -907,11 +907,11 @@
 // An HTML event can be something in browser does, or something  are user does.
 // Here a some example of HTML events
 // 1: An HTML web page has finished loading
-// 2: An input field was changed 
+// 2: An input field was changed
 // 3: An HTML web page has finished loading
 // often, when event happen, you may want to do something.
 // 4: HTML allows events handler attributes, with  JS code,
-// to be added to HTML elements. 
+// to be added to HTML elements.
 
 // --------------------------------------------------------------------------------------------------------
 // @@ 4 way of writing Events in JavaScript
@@ -923,47 +923,165 @@
 
 // check the event HTML file
 // --------------------------------------------------------------------------------------------------------
-// @@ What is Event object 
+// @@ What is Event object
 //  Event object is the parent object of the event object.
 // For example: click event, onClick event etc.
 // --------------------------------------------------------------------------------------------------------
+// ## Date = 11/2/2025
+// --------------------------------------------------------------------------------------------------------
+// @@ Mouse event in JavaScript
+// The Mouse object
+// Event that occur when the mouse interacts with the HTML document belong to the MouseEvent Object.
 
 // --------------------------------------------------------------------------------------------------------
+// @@ Keyboard events in Javascript
+// Event that occur when user presses a key on the keyboard belong to KeyboardEvent Object.
+// --------------------------------------------------------------------------------------------------------
+// @@ InputEvent in Javascript
+// The onchange occurs when the value of an element has been changed
+// --------------------------------------------------------------------------------------------------------
+// @@ difference between addEventListener and onclick
+// The addEventListener does not overwrite existing handler,
+// The onclick overwrite ant existing onclick = fn evenr handler.
+
+// The other significant difference, of course, is that onclick will always work,
+// where as addEventListener does not work in Internet Explorer before version 9.
+// --------------------------------------------------------------------------------------------------------
+// @@ Timing events in JavaScript
+// The Window object allows execution of code at specified time intervals.
+
+// These time intervals are called timing event
+
+// The two method to use with JavaScript are:
+
+// {
+// setTimeout(function, millisecounds)
+// Executes a function, after waiting a specified number of millisecounds.
+// }
+
+// {setInterval(function, millisecounds)
+// Same as setTimeout(), but repeats the execution of the function continuously
+// }
 
 // --------------------------------------------------------------------------------------------------------
+// @@ clearTimeout()
+//  it is use for stop loading time.
 
 // --------------------------------------------------------------------------------------------------------
+// @@ Object orinted JavaScript
+// --------------------------------------------------------------------------------------------------------
+// @@ What is object literal ?
+// Object literal is simply a key and value pair data structure.
+// Storing variable and function together in on container  we can refer this an Object
 
 // --------------------------------------------------------------------------------------------------------
+// 1st way
+// let bioData = {
+//     myName: 'syed',
+//     myAge : 22,
+//     getData : function() {
+//         console.log(`my name is ${bioData.myName} and my age is ${bioData.myAge}`);
+//     }
+// }
+// bioData.getData()
+// --------------------------------------------------------------------------------------------------------
+// 2nd way no need to write function as well
+// let bioData = {
+//     myName: 'syed',
+//     myAge : 22,
+//     getData() {
+//         console.log(`my name is ${bioData.myName} and my age is ${bioData.myAge}`);
+//     }
+// }
+// bioData.getData()
+// --------------------------------------------------------------------------------------------------------
+// 3rd way
+// let bioData = {
+//     myName: {
+//         firstName : 'mujtaba',
+//         lastName : 'shah'
+//     },
+//     myAge : 22,
+//     getData() {
+//         console.log(`my name is ${bioData.myName.firstName} and my age is ${bioData.myAge}`);
+//     }
+// }
+// console.log(bioData.myName.firstName);
 
+// bioData.getData()
 // --------------------------------------------------------------------------------------------------------
 
-// --------------------------------------------------------------------------------------------------------
+// @@ What is this object?
+// this object is that it contain the current context
+// This values object can have different values depending on where it is placed.
+
+// for example 1
+// console.log(this);
+
+// Ex 2
+// function myName() {
+//     console.log(this);
+// }
+// myName();
+
+// Ex 3
+// let myNames = 'shah';
+// function myName() {
+//     console.log(this.myNames);
+// }
+// myName()
 
 // --------------------------------------------------------------------------------------------------------
+// Ex 4
+// const obj ={
+//     myAge: 14,
+//     myNAme() {
+//         console.log(this);
+//     }
+// }
+// obj.myNAme()
 
 // --------------------------------------------------------------------------------------------------------
+// Ex 5
+
+// const obj ={
+//     myAge: 14,
+//     myNAme: () => {
+//         console.log(this);
+//     }
+// }
+// obj.myNAme()
+// --------------------------------------------------------------------------------------------------------
+// @@ Destructuring in ES6
+// The destructuring assigment syntax is a javaScript expression that makes it possiable to unpack values
+// from arraysor porperties from objects, into distinct variables.
+// --------------------------------------------------------------------------------------------------------
+// @@ Array Destructuring
+// const myData = ["zaidi", "shah", 12];
+// let myFName = myData[0];
+// let myLName = myData[1];
+// let myAge = myData[2];
+// let [myFName, myLName,myAge]= myData
+// console.log(myAge);
+
+// let [myFName, myLName,myAge, myDegree = "4th Fail"]= myData
+// console.log(myDegree);
 
 // --------------------------------------------------------------------------------------------------------
+//@@ Object Destructuring
+// let myData = {
+//   myFName: "zaidi",
+//   myLName: "shah",
+//   myAge: 22,
+// };
+
+// let age = myData.myAge;
+// let { myFName, myLName, myAge, myDegree = "4th Fail" } = myData;
+// console.log(`My name is ${myFName} ${myLName} my age is ${myAge} and I am ${myDegree} O yeah`);
 
 // --------------------------------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------------------------------
-
+//@@ Object properties 
+// we can now use dynamic properties
 // --------------------------------------------------------------------------------------------------------
 
 // --------------------------------------------------------------------------------------------------------
