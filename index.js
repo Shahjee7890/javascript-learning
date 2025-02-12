@@ -1080,8 +1080,310 @@
 // console.log(`My name is ${myFName} ${myLName} my age is ${myAge} and I am ${myDegree} O yeah`);
 
 // --------------------------------------------------------------------------------------------------------
-//@@ Object properties 
+// Date 12/2/2025
+// --------------------------------------------------------------------------------------------------------
+//@@ Object properties
 // we can now use dynamic properties
+// no need to write key and value, if both are same
+
+// let myFName = "zaidi";
+// const myBio = {
+//     [myFName] : "hellow world",
+//     [20 + 2] : "is my age"
+// }
+// console.log(myBio);
+
+// let myName = "zaidi shah";
+// let age = 22;
+// const bio = {myName, age}
+// console.log(bio);
+
+// --------------------------------------------------------------------------------------------------------
+// @@ Spread Operator
+
+// const color = ['red', 'blue', 'green', 'white']
+// const myColor = ['red', 'blue', 'green', 'white', 'black','pink']
+//2nd  time add one more color on top and tell  we need to write it again on my array too
+
+// const myFavColor = [...color, 'black', 'pink']
+
+// console.log(myFavColor);
+
+// --------------------------------------------------------------------------------------------------------
+//@@ES7 features
+// 1: array include
+// const color = ['red', 'blue', 'green', 'white']
+// const data = color.includes('red')
+// console.log(data);
+
+// 2: Exponentiation Operator (**)
+
+// console.log(2**3);
+
+// --------------------------------------------------------------------------------------------------------
+//@@ES8 features
+// String padding
+// Object.Values()
+// OBject.entries()
+
+// @@String padding
+//  const mas = "hi i am thakur dave sing";
+//  console.log(mas);
+//  console.log(mas.padStart(4));
+//  console.log(mas.padEnd(2));
+
+// @@Object.Values()
+// const person = {name:'shah', age: 22};
+// console.log(Object.values(person));
+
+// @@OBject.entries()
+
+// console.log(Object.entries(person));
+
+// @@OBject.fromEntries()
+
+// const person = {name:'shah', age: 22};
+// const arrobj = Object.entries(person)
+// console.log(Object.entries(person));
+// console.log(Object.fromEntries(arrobj));
+
+// --------------------------------------------------------------------------------------------------------
+// @@ Flat method array.flat(infinity)
+// it is line reduce method but it is better then reduce beacuse in flat method we use (infinity) method and
+//flat all nested arrays
+
+// const arr = [
+//       ["shah1", "zaidi1"],
+//       ["shah2", "zaidi2"],
+//       ["shah3", "zaidi7"],
+//       ["shah4", "zaidi4", ["shah5", "zaidi6"], ["shah7", "zaidi4", ["shah8", "zaidi9"]]],
+//     ];
+// let flatArry = arr.reduce((accum, currval) => {
+//   return accum.concat(currval);
+// });
+
+// console.log(arr.flat(Infinity));
+// --------------------------------------------------------------------------------------------------------
+
+// @@ OBject.fromEntries()
+
+// const person = {name:'shah', age: 22};
+// const arrobj = Object.entries(person)
+// console.log(Object.entries(person));
+// console.log(Object.fromEntries(arrobj));
+// --------------------------------------------------------------------------------------------------------
+//@@ ES2020
+
+// #1: BigInt
+
+// let oldNum = Number.MAX_SAFE_INTEGER;
+// console.log(oldNum);
+// console.log(9007199254740991n + 12);
+// const newNUm = 9007199254740991n + 12n;
+// console.log(newNUm);
+// console.log(typeof newNUm);
+
+// --------------------------------------------------------------------------------------------------------
+//@@ "use strict"
+// "use strict"
+// let x = 1.4;
+// console.log(x);
+
+// --------------------------------------------------------------------------------------------------------
+//*********************************************************************************************************
+// @@ Advance JavaScript
+//*********************************************************************************************************
+// --------------------------------------------------------------------------------------------------------
+// @@ What is event propagation
+// The event propagation mode determines in which order the element receive the event
+// --------------------------------------------------------------------------------------------------------
+//@@ The Capture phase
+//Going from the window to the event is called target phase.
+// --------------------------------------------------------------------------------------------------------
+//@@ The Bubble phase
+// From event target back to window is called bubble phase.
+// --------------------------------------------------------------------------------------------------------
+//@@ Higher order Function
+//function which takes another function as an argument is called Higher order Function
+// --------------------------------------------------------------------------------------------------------
+//@@ Callback Function
+//Function which get passed as an argument to another function i called Callback Function.
+// A Callback Function is a function that is passed as an argument to another function "callback" at a later time
+// --------------------------------------------------------------------------------------------------------
+// @@ Create calculator
+
+// const add = (a,b) => {
+//     return a+b;
+// }
+// const subs = (a,b) => {
+//     return Math.abs(a-b);
+// }
+// const mul = (a,b) => {
+//     return a*b;
+// }
+
+// const calculator = (num1, num2, operator) => {
+//     return operator(num1,num2);
+// }
+
+// calculator(10,10,add);
+
+// console.log(calculator(10,10,mul));
+
+// --------------------------------------------------------------------------------------------------------
+//@@ Hoisting in Javascript
+
+// We have a creation phase and execution phase.
+
+// Hoisting in JavaScript in a machanism where variables and fucnctions declaration are moved to the top
+//of their scope before the code execute.
+
+// For Example
+// console.log(MyName);
+// var MyName;
+// MyName = "shah";
+
+// var MyName;
+// console.log(MyName);
+// MyName = "shah";
+
+// --------------------------------------------------------------------------------------------------------
+//@@ What is Scope Chain and Lexical Scoping in JavaScript?
+
+// The scope chain is used to resolve the value of variable name in JS
+
+// Scope chain in JS is Lexically defined , which means that we can see what the scope chain will be by
+//looking at the code.
+
+// Lexical Scoping means Now, the inner function can get access  to their parent function Variables
+// but the vice-versa is not true.
+
+//For Example
+
+// let a = "hellow ";
+
+// const first = () => {
+//   let b = "hi ";
+//   const secound = () => {
+//     let c = "bye";
+//     console.log(a + b + c);
+//   };
+//   secound();
+// };
+// first();
+
+// --------------------------------------------------------------------------------------------------------
+//@@ What is Closures in JavaScript
+
+// A Closures is the combination  of a function bundled together (enclosed) with references
+// to its surrounding state (the laxical enviroment)
+
+//  In the other words, a closure gives you access to an outer function's scope from an inner function.
+
+//  In JavaScript, Closures are created every time a function is created, at function creation time.
+
+// For Example
+
+// const outerFn = (a) => {
+//     let b = 10;
+//     const innerFn = () => {
+//         let sum = a+b;
+//         console.log(`the sum is ${sum}`);
+//     }
+//     innerFn();
+// }
+
+// outerFn(5)
+
+// it is ame like lexical scoping
+
+// const outerFn = (a) => {
+//     let b = 10;
+//     const innerFn = () => {
+//         let sum = a+b;
+//         console.log(`the sum is ${sum}`);
+//     }
+//     return innerFn;
+// }
+
+// let check = outerFn(5);
+// console.log(check());
+
+// --------------------------------------------------------------------------------------------------------
+//@@ Synchronous
+
+// const fun2 = () => {
+//     console.log(`hheheheh`);
+// }
+// const fun1 = () => {
+//     console.log(`hahhaa`);
+//     fun2();
+//     console.log(`abcedf`);
+
+// }
+// fun1();
+// --------------------------------------------------------------------------------------------------------
+// Asynchronous JavaScript program
+
+// const fun2 = () => {
+//   setTimeout(() => {
+//     console.log(`hahhaa`);
+//   }, 4000);
+// };
+// const fun1 = () => {
+//   console.log(`hheheheh`);
+//   fun2();
+//   console.log(`abcedf`);
+// };
+// fun1();
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
+
 // --------------------------------------------------------------------------------------------------------
 
 // --------------------------------------------------------------------------------------------------------
