@@ -1337,14 +1337,71 @@
 // };
 // fun1();
 // --------------------------------------------------------------------------------------------------------
+// Date 13/2/2025
+// --------------------------------------------------------------------------------------------------------
+// @@ Currying
+
+// In the currying when a function, instead of taking all arguments at one time, take the first done and
+// return a new function that take secound one and return anew function which takes the third one, and so
+// forth, until argument have been fullfilled.
+
+// Foe Example
+// function sum(num1) {
+// console.log(num1);
+//   return function (num2) {
+// console.log(num1,num2);
+//     return function (num3) {
+//       console.log(num1+num2+num3);
+//     };
+//   };
+// }
+
+// const sum = (num1) => (num2) => (num3) =>console.log(num1+num2+num3);
+
+// sum(5)(3)(8)
+// --------------------------------------------------------------------------------------------------------
+// @@ CallBack Hell
+
+// setTimeout(() => {
+//   console.log(`1 work is done`);
+//   setTimeout(() => {
+//     console.log(`2 work is done`);
+//     setTimeout(() => {
+//       console.log(`3 work is done`);
+
+//       setTimeout(() => {
+//         console.log(`4 work is done`);
+//         setTimeout(() => {
+//           console.log(`5 work is done`);
+
+//           setTimeout(() => {
+//             console.log(`6 work is done`);
+//           }, 1000);
+//         }, 1000);
+//       }, 1000);
+//     }, 1000);
+//   }, 1000);
+// }, 1000);
 
 // --------------------------------------------------------------------------------------------------------
+// @@ JSON.stringify 
+// its turns s JavaScript object into JSON text and store a JSON text in a string 
+
+// var my_object = {key_1: "text ", key_2: true, key_3: 5 };
+
+// var object_as_string = JSON.stringify(my_object);
+
+// console.log(object_as_string);
 
 // --------------------------------------------------------------------------------------------------------
+// @@ JSON.parse 
+// its convert data into object
 
-// --------------------------------------------------------------------------------------------------------
+// var my_object = {key_1: "text ", key_2: true, key_3: 5 };
 
-// --------------------------------------------------------------------------------------------------------
+// var object_as_string_as_object = JSON.parse(object_as_string);
+
+// console.log(object_as_string_as_object);
 
 // --------------------------------------------------------------------------------------------------------
 
