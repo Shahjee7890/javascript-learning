@@ -1,0 +1,124 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.heading h1 {
+    font-size: 3rem;
+    color: #ffcc70;
+    text-shadow: 2px 2px 15px rgba(255, 204, 112, 0.5);
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.btn-div {
+    margin-bottom: 20px;
+}
+
+.circle {
+    background: #ffcc70;
+    color: #2c5364;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(255, 204, 112, 0.4);
+}
+
+.circle:hover {
+    transform: scale(1.1);
+    background: #ffb347;
+}
+
+.note {
+    width: 320px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+    backdrop-filter: blur(10px);
+    animation: slideInUp 0.5s ease-in-out;
+}
+
+.operation {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    background: rgba(255, 204, 112, 0.3);
+}
+
+.operation button {
+    background: transparent;
+    border: none;
+    color: #ffcc70;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.operation button:hover {
+    transform: scale(1.3);
+    color: #ffb347;
+}
+
+.main,
+textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    resize: none;
+}
+
+textarea {
+    min-height: 120px;
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+ 
